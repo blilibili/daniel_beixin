@@ -1,0 +1,177 @@
+<script>
+import {wxa, Page} from '@wxa/core';
+
+@Page
+class Index {
+    goBack(){
+        this.router.goBack();
+    }
+}
+
+wxa.launchPage(Index);
+</script>
+<config>
+{
+    "navigationTextTitle": "我的订单"
+}
+</config>
+<template>
+<view class="page">
+   <view class="order-header">
+       <view bindtap="goBack">
+           <image src="../../img/arrow.png"></image>
+       </view>
+       <view class="order-name">我的订单</view>
+       <view style="height: 10px;width: 10px;opacity: 0;"></view>
+   </view>
+
+   <view class="order-content">
+       <view class="status">
+           <view>全部订单</view>
+           <view>进行中</view>
+           <view>已完成</view>
+       </view>
+       <view class="paniel">
+           <view class="common">
+               <view class="num">订单号: 20180809877771</view>
+               <view class="status-font">进行中</view>
+           </view>
+           <view class="line-hr"></view>
+           <view class="content">方案咨询一对一</view>
+           <view class="common">
+               <view>中级宝妈理财师</view>
+               <view class="status-font">¥299</view>
+           </view>
+           <view class="line-hr"></view>
+           <view class="common get-order">
+               <view>下单时间: 2018年05月23日 09:08</view>
+               <view class="status-font info">查看详情</view>
+           </view>
+       </view>
+
+       <view class="paniel">
+           <view class="common">
+               <view class="num">订单号: 20180809877771</view>
+               <view class="status-font">进行中</view>
+           </view>
+           <view class="line-hr"></view>
+           <view class="content">保单分析</view>
+           <view class="common">
+               <view>家庭保单 10份以下</view>
+               <view class="status-font">¥299</view>
+           </view>
+           <view class="line-hr"></view>
+           <view class="common get-order">
+               <view>下单时间: 2018年05月23日 09:08</view>
+               <view class="status-font info">查看详情</view>
+           </view>
+       </view>
+
+       <view class="paniel">
+           <view class="common">
+               <view class="num">订单号: 20180809877771</view>
+               <view class="status-success">已完成</view>
+           </view>
+           <view class="line-hr"></view>
+           <view class="content">理财荟第8期</view>
+           <view class="common">
+               <view>手把手教你普通工薪阶层如何理财</view>
+               <view class="status-font">¥50</view>
+           </view>
+           <view class="line-hr"></view>
+           <view class="common get-order">
+               <view>下单时间: 2018年05月23日 09:08</view>
+               <view class="status-font info">查看详情</view>
+           </view>
+       </view>
+   </view>
+</view>
+</template>
+<style lang="scss">
+.page {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgb(242,242,242);
+    /*flex-direction: row;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+}
+.order-content{
+    width: 98%;
+    margin: 0 auto;
+    .status{
+        margin: 20rpx 0;
+        display: flex;
+        justify-content: flex-start;
+        view{
+            padding: 10rpx 10rpx;
+            border:1px solid black;
+            font-size: 14px;
+        }
+        & view:first-child{
+            background-color: rgb(153,204,51);
+        }
+    }
+    .paniel{
+        padding: 20rpx;
+        border:1px solid lightgrey;
+        background-color: white;
+        margin-top: 20rpx;
+        .content{
+            font-size: 16px;
+            margin-top: 20rpx;
+        }
+        .line-hr{
+            height: 1px;
+            background-color: lightgrey;
+            width: 100%;
+            margin-top: 20rpx;
+        }
+        .common{
+            display: flex;
+            justify-content: space-between;
+            view{
+                font-size: 14px;
+            }
+            .status-font{
+                color: red;
+            }
+            .num{
+                color: rgb(102,102,102);
+            }
+            .status-success{
+                color: rgb(0,153,0);
+            }
+        }
+        .get-order{
+            color: lightgrey;
+            margin-top: 10rpx;
+            .info{
+                color: lightgrey;
+            }
+        }
+    }
+}
+.order-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20rpx;
+    background-color: white;
+    .order-name{
+        font-size: 16px;
+    }
+    view{
+        image{
+            height: 50rpx;
+            width: 50rpx;
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+    }
+}
+</style>

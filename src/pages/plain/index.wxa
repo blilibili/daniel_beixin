@@ -1,0 +1,103 @@
+<script>
+import {wxa, Page} from '@wxa/core';
+
+@Page
+class Index {
+
+}
+
+wxa.launchPage(Index);
+</script>
+<config>
+{
+    "navigationTextTitle": "首页"
+}
+</config>
+<template>
+<view class="page">
+   <view class="plain-section">
+       <image src="../../img/plain-bg.png" style="width: 100%;height: 1080rpx;"></image>
+   </view>
+   <view class="create-plain">
+       <image src="../../img/createPlainBtn.png"></image>
+       <text>立即制定</text>
+   </view>
+</view>
+</template>
+<style lang="scss">
+.page {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgb(242,242,242);
+    /*flex-direction: row;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+}
+.header-banner{
+    width: 100%;
+    height: 340rpx;
+}
+.financial-menu , .second-part {
+    width: 99%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20rpx 0;
+    background-color: white;
+    margin: 0 auto;
+    border: 1px solid lightgrey;
+}
+.three-part{
+    width: 99%;
+    display: block;
+    margin: 10rpx auto 0 auto;
+    background-color: white;
+    border: 1px solid lightgrey;
+}
+.part-three-title{
+    padding: 15rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.part-three-content{
+    margin-top: 20rpx;
+    display: flex;
+    justify-content: space-around;
+}
+.second-part {
+    margin-top: 10rpx;
+    padding: 40rpx 0;
+}
+.financial-menu text{
+    font-size: 14px;
+}
+.f-btn{
+    display: block;
+}
+.f-btn view {
+    text-align: center;
+}
+.second-part-strong{
+    font-weight: bold;
+    font-size: 14px;
+}
+.second-part-desc{
+    font-size: 12px;
+}
+.create-plain image , .create-plain text{
+    position:absolute;
+    top:282rpx;
+    right:39rpx;
+    width:322rpx;
+    height:169rpx;
+}
+.create-plain text{
+    font-size:22px;
+    color:#ea6001;
+    text-align:center;
+    padding-top:55rpx;
+
+}
+</style>

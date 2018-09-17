@@ -1,0 +1,59 @@
+<script>
+import {wxa, App} from '@wxa/core';
+
+@App
+class Main {
+    constructor() {}
+}
+
+wxa.launchApp(Main);
+</script>
+<config>
+{
+    "pages": [
+        "pages/index",
+        "pages/plain/index",
+        "pages/insurance/index",
+        "pages/personal/index",
+        "pages/personal/info",
+        "pages/order/index",
+        "pages/family/index",
+        "pages/family/info",
+        "pages/course/index",
+        "pages/about/index"
+    ],
+    "window": {
+        "navigationBarTitleText": "贝鑫小程序"
+    },
+    "tabBar": {
+        "list": [{
+            "pagePath": "pages/index",
+            "text": "首页",
+            "iconPath":"./img/f-icon3.png",
+            "selectedIconPath":"./img/f-icon3.png"
+        }, {
+            "pagePath": "pages/plain/index",
+            "text": "方案定制",
+            "iconPath":"./img/f-icon2.png",
+            "selectedIconPath":"./img/f-icon2.png"
+        }, {
+            "pagePath": "pages/insurance/index",
+            "text": "保单整理",
+            "iconPath":"./img/f-icon1.png",
+            "selectedIconPath":"./img/f-icon1.png"
+        }, {
+            "pagePath": "pages/personal/index",
+            "text": "我的",
+            "iconPath":"./img/f-icon4.png",
+            "selectedIconPath":"./img/f-icon4.png"
+        }
+    ]
+    }
+}
+</config>
+<style lang="scss">
+page {
+    width: 100%;
+    height: 100%;
+}
+</style>

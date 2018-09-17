@@ -1,0 +1,139 @@
+<script>
+import {wxa, Page} from '@wxa/core';
+
+@Page
+class Index {
+    goBack(){
+        this.router.goBack();
+    }
+}
+
+wxa.launchPage(Index);
+</script>
+<config>
+{
+    "navigationTextTitle": "我的公开课"
+}
+</config>
+<template>
+<view class="page">
+    <view class="course-header">
+        <view bindtap="goBack">
+            <image src="../../img/arrow.png"></image>
+        </view>
+        <view class="course-name">我的公开课</view>
+        <view style="height: 10px;width: 10px;opacity: 0;"></view>
+    </view>
+
+    <view class="course-content">
+        <view class="part-three-content">
+            <view>
+                <image src="../../img/demo1.jpg" style="width: 150rpx;height: 150rpx;"></image>
+            </view>
+            <view>
+                <view>
+                    <text class="second-part-strong">手把手教你普通工薪阶层如何理财</text>
+                </view>
+                <view>
+                    <text class="second-part-desc">2018-10-10 14:30-15:30</text>
+                </view>
+                <view>
+                    <text class="second-part-strong">主讲: 李晓东</text>
+                    <button style="width: 160rpx;font-size: 12px;float: right;background-color: rgb(242,160,98)" type="primary">取消报名</button>
+                </view>
+            </view>
+        </view>
+
+        <view class="part-three-content">
+            <view>
+                <image src="../../img/demo1.jpg" style="width: 150rpx;height: 150rpx;"></image>
+            </view>
+            <view>
+                <view>
+                    <text class="second-part-strong">手把手教你普通工薪阶层如何理财</text>
+                </view>
+                <view>
+                    <text class="second-part-desc">2018-10-10 14:30-15:30</text>
+                </view>
+                <view>
+                    <text class="second-part-strong">主讲: 李晓东</text>
+                    <button style="width: 160rpx;font-size: 12px;float: right;background-color: rgb(242,160,98)" type="primary">已结束</button>
+                </view>
+            </view>
+        </view>
+
+        <view class="part-three-content">
+            <view>
+                <image src="../../img/demo1.jpg" style="width: 150rpx;height: 150rpx;"></image>
+            </view>
+            <view>
+                <view>
+                    <text class="second-part-strong">手把手教你普通工薪阶层如何理财</text>
+                </view>
+                <view>
+                    <text class="second-part-desc">2018-10-10 14:30-15:30</text>
+                </view>
+                <view>
+                    <text class="second-part-strong">主讲: 李晓东</text>
+                    <button style="width: 160rpx;font-size: 12px;float: right;background-color: rgb(242,160,98)" type="primary">已报名</button>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+</template>
+<style lang="scss">
+.page {
+    height: 100%;
+    display: block;
+    background-color: rgb(242,242,242);
+    /*flex-direction: row;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+}
+.course-content{
+    background-color: white;
+    margin: 20rpx auto;
+    width: 98%;
+}
+.part-three-content{
+    display: flex;
+    justify-content: space-around;
+    padding: 20rpx 0;
+    border-bottom: 1px solid lightgrey;
+}
+.f-btn{
+    display: block;
+}
+.f-btn view {
+    text-align: center;
+}
+.second-part-strong{
+    font-weight: bold;
+    font-size: 14px;
+}
+.second-part-desc{
+    font-size: 12px;
+}
+.course-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20rpx;
+    background-color: white;
+    .course-name{
+        font-size: 16px;
+    }
+    view{
+        image{
+            height: 50rpx;
+            width: 50rpx;
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+    }
+}
+</style>

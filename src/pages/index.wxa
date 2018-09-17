@@ -1,0 +1,176 @@
+<script>
+import {wxa, Page} from '@wxa/core';
+
+@Page
+class Index {
+    onLoad() {
+        console.log('hello, this is wxa page');
+    }
+}
+
+wxa.launchPage(Index);
+</script>
+<config>
+{
+    "navigationTextTitle": "首页"
+}
+</config>
+<template>
+<view class="page">
+    <view class="header-banner">
+        <image src="../img/banner.jpg" style="width: 100%;height: 100%;"></image>
+    </view>
+    <view class="financial-menu">
+        <view class="f-btn">
+            <view>
+                <image src="../img/f-icon1.png" style="width: 50rpx;height: 50rpx;"></image>
+            </view>
+            <text>理财日报</text>
+        </view>
+        <view class="f-btn">
+            <view>
+                <image src="../img/f-icon2.png" style="width: 50rpx;height: 50rpx;"></image>
+            </view>
+            <text>理财启蒙</text>
+        </view>
+        <view class="f-btn">
+            <view>
+                <image src="../img/f-icon3.png" style="width: 50rpx;height: 50rpx;"></image>
+            </view>
+            <text>理财荟</text>
+        </view>
+    </view>
+
+    <view class="second-part">
+        <view class="f-btn">
+            <view>
+                <image src="../img/f-icon1.png" style="width: 50rpx;height: 50rpx;"></image>
+            </view>
+            <view>
+                <text class="second-part-strong">方案定制</text>
+            </view>
+            <view>
+                <text class="second-part-desc">专属宝宝保险方案推荐</text>
+            </view>
+        </view>
+
+        <view class="f-btn">
+            <view>
+                <image src="../img/f-icon1.png" style="width: 50rpx;height: 50rpx;"></image>
+            </view>
+            <view>
+                <text class="second-part-strong">保单整理</text>
+            </view>
+            <view>
+                <text class="second-part-desc">您掌中的保单管理神器</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="three-part">
+        <view class="part-three-title">
+            <span style="font-size: 14px;">理财荟</span>
+            <span style="font-size: 14px;color: rgb(234,96,1);">更多</span>
+        </view>
+        <view class="part-three-content">
+            <view>
+                <image src="../img/demo1.jpg" style="width: 150rpx;height: 150rpx;"></image>
+            </view>
+            <view>
+                <view>
+                    <text class="second-part-strong">手把手教你普通工薪阶层如何理财</text>
+                    <text style="font-size: 14px;color: rgb(234,96,1);">¥50</text>
+                </view>
+                <view>
+                    <text class="second-part-desc">2018-10-10 14:30-15:30</text>
+                </view>
+                <view>
+                    <text class="second-part-strong">主讲: 李晓东</text>
+                    <button style="width: 120rpx;font-size: 12px;float: right;background-color: rgb(242,160,98)" type="primary">报名</button>
+                </view>
+            </view>
+        </view>
+        <view class="part-three-content">
+            <view>
+                <image src="../img/demo1.jpg" style="width: 150rpx;height: 150rpx;"></image>
+            </view>
+            <view>
+                <view>
+                    <text class="second-part-strong">手把手教你普通工薪阶层如何理财</text>
+                    <text style="font-size: 14px;color: rgb(234,96,1);">¥50</text>
+                </view>
+                <view>
+                    <text class="second-part-desc">2018-10-10 14:30-15:30</text>
+                </view>
+                <view>
+                    <text class="second-part-strong">主讲: 李晓东</text>
+                    <button style="width: 120rpx;font-size: 12px;float: right;background-color: rgb(242,160,98);border-radius: 0;border:0" type="primary">报名</button>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+</template>
+<style lang="scss">
+.page {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgb(242,242,242);
+    /*flex-direction: row;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+}
+.header-banner{
+    width: 100%;
+    height: 340rpx;
+}
+.financial-menu , .second-part {
+    width: 99%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20rpx 0;
+    background-color: white;
+    margin: 0 auto;
+    border: 1px solid lightgrey;
+}
+.three-part{
+    width: 99%;
+    display: block;
+    margin: 10rpx auto 0 auto;
+    background-color: white;
+    border: 1px solid lightgrey;
+}
+.part-three-title{
+    padding: 15rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.part-three-content{
+    margin-top: 20rpx;
+    display: flex;
+    justify-content: space-around;
+}
+.second-part {
+    margin-top: 10rpx;
+    padding: 40rpx 0;
+}
+.financial-menu text{
+    font-size: 14px;
+}
+.f-btn{
+    display: block;
+}
+.f-btn view {
+    text-align: center;
+}
+.second-part-strong{
+    font-weight: bold;
+    font-size: 14px;
+}
+.second-part-desc{
+    font-size: 12px;
+}
+</style>
